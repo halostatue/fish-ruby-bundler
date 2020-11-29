@@ -13,7 +13,11 @@ only Fish 3.0 supported and configured for Fisher installation.
 Install with [Fisher] (recommended):
 
 ```fish
+# Fisher v3.x
 fisher add halostatue/fish-ruby-bundler
+
+# Fisher v4.0+
+fisher install halostatue/fish-ruby-bundler
 ```
 
 <details>
