@@ -1,25 +1,39 @@
-function _halostatue_fish_ruby_bundler_uninstall -e halostatue_fish_ruby_bundler_uninstall
-    functions -e (_halostatue_fish_ruby_bundler_wrapped_executables)
-    functions -e (functions -a | string match -e -r _halostatue_fish_ruby_bundler_)
+# @halostatue/fish-rake/conf.d/halostatue_fish_ruby_bundler.fish:v2.0.0
+
+set --local wrapped \
+    annotate \
+    appraisal \
+    cap \
+    capify \
+    cucumber \
+    guard \
+    kitchen \
+    middleman \
+    nanoc \
+    puma \
+    rackup \
+    rake \
+    rspec \
+    rubocop \
+    ruby \
+    sidekiq \
+    spec \
+    spinach \
+    standardrb \
+    thin \
+    thor \
+    unicorn \
+    unicorn_rails
+
+set --query --universal bundler_execs
+and set --append wrapped $bundler_execs
+
+for exec in $wrapped
+    printf 'function %s\n  __bundle_exec %s $argv\nend' $exec $exec | source
 end
 
-function _halostatue_fish_ruby_bundler_wrapped_executables
-    set -l execs annotate cap capify cucumber dashing guard kitchen \
-        middleman nanoc puma rackup rainbows rake rspec rubocop ruby \
-        shotgun sidekiq spec spinach spork thin thor unicorn unicorn_rails
-
-    set -q bundler_plugin_execs
-    and set -a execs $bundler_plugin_execs
-
-    set -q bundler_execs
-    and set -a execs $bundler_execs
-
-    echo $execs | string split ' '
-end
-
-for executable in (_halostatue_fish_ruby_bundler_wrapped_executables)
-echo $executable
-    function $executable --inherit-variable executable
-        bundle:exec $executable $argv
-    end
+function _halostatue_fish_ruby_bundler_uninstall \
+    -e halostatue_fish_ruby_bundler_uninstall \
+    -V wrapped
+    functions -e $wrapped _halostatue_fish_ruby_bundler_uninstall
 end
