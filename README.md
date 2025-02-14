@@ -1,16 +1,15 @@
 # halostatue/fish-ruby-bundler
 
+[![Version][version]](https://github.com/halostatue/fish-ruby-bundler/releases)
+
 Automatically overrides the some calls to prepend `bundle exec` if the gem is
 available within the context of a Ruby bundle.
 
-This is a fork of [oh-my-fish/plugin-bundler][omf-bundler] with some bug
-fixes.
-
-[![Version]][release]
+This is a fork of [oh-my-fish/plugin-bundler][omf-bundler] with some bug fixes.
 
 ## Installation
 
-Install with [Fisher][]:
+Install with [Fisher][Fisher]:
 
 ```fish
 fisher install halostatue/fish-ruby-bundler
@@ -50,20 +49,29 @@ The following executables will automatically be wrapped:
 - `unicorn`
 - `unicorn_rails`
 
-Additional bundled executables may be added in your `config.fish` by setting
-the list in the `bundler_execs` universal variable:
+Additional bundled executables may be added in your `config.fish` by setting the
+list in the `bundler_execs` universal variable:
 
 ```fish
 set --unibundler_execs jekyll mustache
 ```
 
-## License
+## Licence
 
-[MIT](LICENCE.md)
+[MIT](./LICENCE.md)
+
+## Change Log
+
+[CHANGELOG](./CHANGELOG.md)
+
+## Contributing
+
+- [Contributing](./CONTRIBUTING.md)
+- [Contributors](./CONTRIBUTORS.md)
+- [Code of Conduct](./CODE_OF_CONDUCT.md)
 
 [fish shell]: https://fishshell.com "friendly interactive shell"
 [Version]: https://img.shields.io/github/tag/halostatue/fish-ruby-bundler.svg?label=Version
-[release]: https://github.com/halostatue/fish-ruby-bundler/releases
 [Fisher]: https://github.com/jorgebucaran/fisher
 [fish]: https://github.com/fish-shell/fish-shell
 [omf-bundler]: https://github.com/oh-my-fish/plugin-bundler
