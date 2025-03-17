@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: extractions/setup-just@v2
+      - uses: extractions/setup-just@v3
       - uses: fish-shop/install-fish-shell@v1.0.50
       - uses: fish-shop/indent-check@v2.2.39
       - uses: fish-shop/syntax-check@v2.2.38
