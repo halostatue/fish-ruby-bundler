@@ -1,9 +1,15 @@
-# MIT Licence
+# Licence
+
+- SPDX-License-Identifier: [MIT][mit]
 
 Copyright 2020–2025 Austin Ziegler
 
 - Based on [oh-my-fish/plugin-bundler][omf-bundler], copyright (c) 2014 Bruno
   Ferreira Pinto and other contributors.
+
+The software in this repository is made available under the MIT license.
+
+## MIT License
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
