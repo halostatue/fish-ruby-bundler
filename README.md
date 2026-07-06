@@ -1,6 +1,7 @@
 # halostatue/fish-ruby-bundler
 
 [![Version][version]](https://github.com/halostatue/fish-ruby-bundler/releases)
+[![MIT](https://img.shields.io/badge/licence-MIT-blue?style=for-the-badge "MIT")](https://github.com/halostatue/fish-ruby-bundler/blob/main/LICENCE.md)
 
 Automatically overrides the some calls to prepend `bundle exec` if the gem is
 available within the context of a Ruby bundle.
